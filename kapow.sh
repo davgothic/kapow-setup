@@ -51,8 +51,11 @@ fi
 rm *.zip
 rm -r kapow-*
 
-# Install deps
-
+# Clone WordPress and install NPM & Bower dependencies
 cd kapow
+
+rm -r htdocs/wordpress
+
+git submodule add -f git@github.com:WordPress/WordPress.git htdocs/wordpress
 
 npm install && bower install
