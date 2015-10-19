@@ -1,5 +1,5 @@
-# Kapow! Test Suite
-A test suite to quickly test for breaking changes caused by Kapow! component updates.
+# Kapow! Setup
+A setup script to quickly scaffold a new Kapow! project or test for breaking changes caused by Kapow! component updates.
 
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
 
