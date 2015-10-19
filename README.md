@@ -7,7 +7,19 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 
 3) Make the script executable via the command line using `chmod +x kapow.sh`.
 
-4) Run the script with `./kapow.sh`.
+4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created:
+
+- Slug e.g. `avengers-initiative`
+- Nice Name e.g `"Avengers Initiative"`
+- DB Name e.g. `avengers_int`
+- Author Name e.g. `"Director Fury"`
+- Author Email e.g. `director@avengers.com`
+
+Which would look like this:
+
+`./kapow.sh avengers-int "Avengers Initiative" avengers_int "Director Fury" director@avengers.com`
+
+*NB: Strings containing spaces must be encapsulated in double quotes.*
 
 5) Run `grunt` to build the project and check for any Grunt errors.
 
