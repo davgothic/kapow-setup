@@ -22,40 +22,34 @@ done
 skeldir="kapow-skeleton-master";
 if [ -d $skeldir ]
   then
-  cp -a $skeldir/* kapow/
+  cp -a $skeldir/* /
 fi
 
 # Move Sass
 sassdir="kapow-sass-master";
 if [ -d $sassdir ]
   then
-  cp -a $sassdir/* kapow/assets/sass
+  cp -a $sassdir/* assets/sass
 fi
 
 # Move Grunt
 gruntdir="kapow-grunt-master";
 if [ -d $gruntdir ]
   then
-  cp -a $gruntdir/* kapow/
+  cp -a $gruntdir/* /
 fi
 
 # Move Theme
 themedir="kapow-theme-master";
 if [ -d $themedir ]
   then
-  mkdir kapow/htdocs/wp-content/themes/my-project
-  cp -a $themedir/* kapow/htdocs/wp-content/themes/my-project
+  mkdir build/wp-content/themes/my-project
+  cp -a $themedir/* build/wp-content/themes/my-project
 fi
 
 # Remove the archives
 rm *.zip
 rm -r kapow-*
 
-# Clone WordPress and install NPM & Bower dependencies
-cd kapow
-
-rm -r htdocs/wordpress
-
-git submodule add -f git@github.com:WordPress/WordPress.git htdocs/wordpress
-
-npm install && bower install
+# Install All The Things(tm)
+npm install && bower install && composer install
