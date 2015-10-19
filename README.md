@@ -24,4 +24,4 @@ Which would look like this:
 
 5) Run `grunt` to build the project and check for any Grunt errors.
 
-6)  Run `vagrant up --provision` to check for any front-end or theme errors via `my-project.dev`.
+6)  Run `vagrant up --provision` to check for any front-end or theme errors via `your-slug.dev`.
