@@ -18,7 +18,7 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 
 Which would look like this:
 
-`./kapow.sh avengers-int "Avengers Initiative" avengers_int "Director Fury" director@avengers.com www.avengers.com`
+`./kapow.sh the-avengers "The Avengers" the_avengers "Nick Fury" nick@avengers.com www.avengers.com`
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
