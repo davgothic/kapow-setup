@@ -9,12 +9,14 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 
 4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created:
 
-- Slug e.g. `avengers-initiative`
-- Nice Name e.g `"Avengers Initiative"`
-- DB Name e.g. `avengers_int`
+- Project Slug e.g. `avengers-initiative`
+- Project Nice Name e.g `"Avengers Initiative"`
+- DB Name & Function Prefix e.g. `avengers_int`
 - Author Name e.g. `"Director Fury"`
 - Author Email e.g. `director@avengers.com`
 - Author Website e.g. `www.avengers.com`
+
+*NB: The project slug is also used as the theme folder name and `textdomain`.*
 
 Which would look like this:
 
