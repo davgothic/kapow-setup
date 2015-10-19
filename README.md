@@ -11,4 +11,4 @@ A test suite to quickly test for breaking changes caused by Kapow! component upd
 
 5) Run `grunt` to build the project and check for any Grunt errors
 
-5)  Run `vagrant up --provision` so that you can check for any front-end or theme errors using `my-project.dev` as the local domain.
+6)  Run `vagrant up --provision` to check for any front-end or theme errors via `my-project.dev`.
