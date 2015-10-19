@@ -1,4 +1,4 @@
-# Kapow! Setup Script - Requires Bash shell on OSX
+# Kapow! Team...ASSEMBLE!!!
 # -----------------------------------------------------------------------------
 
 # Input variables
@@ -7,6 +7,7 @@ nicename=$2
 dbname=$3
 authorname=$4
 authoremail=$5
+authorurl=$6
 
 # GitHub Kapow URL prefix
 prefix="https://github.com/mkdo/kapow-";
@@ -70,6 +71,14 @@ rm -r kapow-*
 for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'`; do
 	if [[ -f $file ]] && [[ -w $file ]]; then
 
+		# Author URL - Must come before Slug
+		# We use hash as the delimiter string here to ensure that any slashes in
+		# the url string don't mess things up.
+		if [[ $authorurl ]]
+		then
+		sed -i "" "s#http://my-project.com#http://$authorurl#g" "$file"
+		fi
+
 		# Slug
 		if [[ $slug ]]
 		then
@@ -104,4 +113,4 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 done
 
 # Install All The Things(tm)
-npm install && bower install && composer install
+npm install && bower install && composer create-project
