@@ -1,4 +1,4 @@
-# Kapow! Team...ASSEMBLE!!!
+# Kapow! Setup Script - Requires a Bash shell on OSX
 # -----------------------------------------------------------------------------
 
 # Input variables
@@ -114,3 +114,6 @@ done
 
 # Install All The Things(tm)
 npm install && bower install && composer create-project
+
+# Build the project
+grunt
