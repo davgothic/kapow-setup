@@ -18,7 +18,7 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 
 *NB: The project slug is also used as the theme folder name and `textdomain`.*
 
-Which would look like this:
+An example using all of the above would look like this:
 
 `./kapow.sh the-avengers "The Avengers" the_avengers "Nick Fury" nick@avengers.com www.avengers.com`
 
