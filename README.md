@@ -24,6 +24,4 @@ An example using all of the above would look like this:
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
-5) Run `grunt` to build the project and check for any Grunt errors.
-
-6)  Run `vagrant up --provision` to check for any front-end or theme errors via `your-slug.dev`.
+5) After Grunt has finished, run `vagrant up --provision` and view the site using `your-slug.dev`.
