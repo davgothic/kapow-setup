@@ -14,10 +14,11 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 - DB Name e.g. `avengers_int`
 - Author Name e.g. `"Director Fury"`
 - Author Email e.g. `director@avengers.com`
+- Author Website e.g. `www.avengers.com`
 
 Which would look like this:
 
-`./kapow.sh avengers-int "Avengers Initiative" avengers_int "Director Fury" director@avengers.com`
+`./kapow.sh avengers-int "Avengers Initiative" avengers_int "Director Fury" director@avengers.com www.avengers.com`
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
