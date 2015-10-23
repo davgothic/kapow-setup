@@ -5,6 +5,10 @@ A setup script to quickly scaffold a new Kapow! project or test for breaking cha
 
 2) Download the `kapow.sh` script and move it to the folder you just created.
 
+`curl -O https://raw.githubusercontent.com/mkdo/kapow-setup/master/kapow-setup/kapow.sh`
+
+`wget https://raw.githubusercontent.com/mkdo/kapow-setup/master/kapow-setup/kapow.sh`
+
 3) Make the script executable via the command line using `chmod +x kapow.sh`.
 
 4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created:
