@@ -113,7 +113,7 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 done
 
 # Install All The Things(tm)
-npm install && bower install && composer create-project
+composer create-project && bower install && npm install
 
 # Build the project
 grunt
