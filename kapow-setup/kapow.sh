@@ -4,10 +4,9 @@
 # Input variables
 slug=$1
 nicename=$2
-dbname=$3
-authorname=$4
-authoremail=$5
-authorurl=$6
+authorname=$3
+authoremail=$4
+authorurl=$5
 
 # GitHub Kapow URL prefix
 prefix="https://github.com/mkdo/kapow-";
@@ -79,22 +78,19 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 		sed -i "" "s#http://my-project.com#http://$authorurl#g" "$file"
 		fi
 
-		# Slug
+		# Slug - hyphen and underscore replacements
 		if [[ $slug ]]
 		then
 		sed -i "" "s/my-project/$slug/g" "$file"
+		
+		underslug=`echo $slug|tr '-' '_'`
+		sed -i "" "s/my_project/$underslug/g" "$file"
 		fi
 
 		# Nice Name
 		if [[ $nicename ]]
 		then
 		sed -i "" "s/My Project/$nicename/g" "$file"
-		fi
-
-		# DB Name
-		if [[ $dbname ]]
-		then
-		sed -i "" "s/my_project/$dbname/g" "$file"
 		fi
 
 		# Author Name
