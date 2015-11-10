@@ -1,5 +1,5 @@
 # Kapow! Setup
-A setup script to quickly scaffold a new Kapow! project or test for breaking changes caused by module updates.
+The setup script for the Kapow! boilerplate/framework for WordPress site development. 
 
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
 
