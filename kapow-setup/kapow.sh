@@ -2,18 +2,34 @@
 # -----------------------------------------------------------------------------
 
 # Input variables
-slug=$1
-nicename=$2
-authorname=$3
-authoremail=$4
-authorurl=$5
+flag=$1
+
+if [[ $flag = '-w' ]];
+	then
+
+	whoosh=$1
+	slug=$2
+	nicename=$3
+	authorname=$4
+	authoremail=$5
+	authorurl=$6
+
+	else
+
+	slug=$1
+	nicename=$2
+	authorname=$3
+	authoremail=$4
+	authorurl=$5
+
+fi
 
 # GitHub Kapow URL prefix
 prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/master.zip";
 
 # Array of Kapow! component names
-declare -a arr=("skeleton" "sass" "grunt" "theme")
+declare -a arr=("skeleton" "sass" "grunt" "theme" "whoosh")
 
 # Fetch and extract the archives
 for i in "${arr[@]}"
@@ -53,13 +69,24 @@ if [ -d $themedir ]
 	then
 
 	if [ ! $slug ]
-	then
-	slug="my-project"
+		then
+		slug="my-project"
 	fi
 
 	mkdir build/wp-content/themes/$slug
 	chmod 755 build/wp-content/themes/$slug
 	cp -a $themedir/* build/wp-content/themes/$slug
+fi
+
+# Move Whoosh - if parameter supplied
+whooshdir="kapow-whoosh-master/kapow-whoosh";
+if [ -d $whooshdir ]
+	then
+
+	if [ $whoosh ]
+		then
+		cp -af $whooshdir/* .
+	fi
 fi
 
 # Remove the archives
@@ -82,7 +109,7 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 		if [[ $slug ]]
 		then
 		sed -i "" "s/my-project/$slug/g" "$file"
-		
+
 		underslug=`echo $slug|tr '-' '_'`
 		sed -i "" "s/my_project/$underslug/g" "$file"
 		fi
