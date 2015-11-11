@@ -9,7 +9,7 @@ The setup script for the Kapow! boilerplate/framework for WordPress site develop
 
 `wget https://raw.githubusercontent.com/mkdo/kapow-setup/master/kapow-setup/kapow.sh`
 
-3) Make the script executable via the command line using `chmod +x kapow.sh`.
+3) Make the script executable via the command line using `chmod a+x kapow.sh`.
 
 4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created:
 
