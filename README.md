@@ -13,7 +13,7 @@ The setup script for the Kapow! boilerplate/framework for WordPress site develop
 
 4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created. 
 
-*Kapow! Setup Parameters*
+**Kapow! Setup Parameters**
 
 The parameters must be added in the following order:
 
@@ -31,7 +31,7 @@ An example using all of the above would look like this:
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
-*Adding Kapow! Whoosh*
+**Adding Kapow! Whoosh**
 
 At Make Do (the brains behind Kapow!) we have a few extra WordPress and Front-end dependencies that are commonly used in the projects we work on. As we didn't want to make Kapow! any more opinionated than it already is out of the box, we needed to stash our alternative `composer` and `bower` manifests in a seperate repo that we're calling [Kapow! Whoosh](https://github.com/mkdo/kapow-whoosh).
 
