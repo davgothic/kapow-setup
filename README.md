@@ -1,6 +1,20 @@
 # Kapow! Setup
 The setup script for the Kapow! boilerplate/framework for WordPress site development. 
 
+## Requirements
+
+You will need the following installed on your system before attempting to set-up a Kapow! project using this guide.
+
+- [VirtualBox](http://www.virtualbox.org/) (or another virtual machine app such as Paralells)
+- [Vagrant](https://www.vagrantup.com/)
+- [VVV a.k.a Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [NodeJS](https://nodejs.org/)
+- [Bower](http://bower.io/#install-bower)
+- [Grunt](http://gruntjs.com/installing-grunt)
+
+## Installation
+
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
 
 2) Download the `kapow.sh` script from this repo and move it to the folder you just created or grab it directly via the terminal using the commands below and:
