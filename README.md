@@ -27,7 +27,7 @@ The parameters must be added in the following order:
 
 An example using all of the above would look like this:
 
-`./kapow.sh the-avengers "The Avengers" "Nick Fury" nick@avengers.com www.avengers.com`
+`./kapow.sh the-avengers "The Avengers" "Nick Fury" nick@fury.com www.avengers.com`
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
@@ -37,6 +37,6 @@ At Make Do (the brains behind Kapow!) we have a few extra WordPress and Front-en
 
 If you'd like to add *Whoosh* to your project, simply add the `-w` flag immediately after your invoke the `kapow.sh` script, but before you pass in any parameters. It should look like this:
 
-`./kapow.sh -w the-avengers "The Avengers" "Nick Fury" nick@avengers.com www.avengers.com`
+`./kapow.sh -w the-avengers "The Avengers" "Nick Fury" nick@fury.com www.avengers.com`
 
 5) After Grunt has finished, run `vagrant up --provision` and view the site using `your-slug.dev`.
