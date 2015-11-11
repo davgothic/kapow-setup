@@ -19,7 +19,7 @@ The setup script for the Kapow! boilerplate/framework for WordPress site develop
 - Author Email e.g. `director@avengers.com`
 - Author Website e.g. `www.avengers.com`
 
-*NB: The project slug will be used for the theme folder name, theme textdomain, database name & function prefix.*
+*NB: The project slug will be used for the theme folder name, theme textdomain, code namespace and database name.*
 
 An example using all of the above would look like this:
 
