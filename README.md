@@ -33,7 +33,7 @@ An example using all of the above would look like this:
 
 **Adding Kapow! Whoosh**
 
-At Make Do (the brains behind Kapow!) we have a few extra WordPress and Front-end dependencies that are commonly used in the projects we work on.
+At [Make Do](http://www.makedo.net) (the brains behind Kapow!) we have a few extra WordPress and Front-end dependencies that are commonly used in the projects we work on.
 
 As we didn't want to make Kapow! any more opinionated than it already is out of the box, we needed to stash our alternative `composer` and `bower` manifests in a seperate repo that we've decided to call [Kapow! Whoosh](https://github.com/mkdo/kapow-whoosh) in keeping with the comic/superhero theme!
 
