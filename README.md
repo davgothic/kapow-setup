@@ -3,7 +3,7 @@ The setup script for the Kapow! boilerplate/framework for WordPress site develop
 
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
 
-2) Download the `kapow.sh` script and move it to the folder you just created.
+2) Download the `kapow.sh` script from this repo and move it to the folder you just created or grab it directly via the command line using the commands below and:
 
 `curl -O https://raw.githubusercontent.com/mkdo/kapow-setup/master/kapow-setup/kapow.sh`
 
