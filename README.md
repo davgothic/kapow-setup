@@ -11,7 +11,7 @@ The setup script for the Kapow! boilerplate/framework for WordPress site develop
 
 3) Make the script executable via the command line using `chmod a+x kapow.sh`.
 
-4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created:
+4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created. The parameters must be added in the following order:
 
 - Project Slug e.g. `avengers-initiative` *
 - Project Nice Name e.g `"Avengers Initiative"`
