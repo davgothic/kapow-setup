@@ -150,7 +150,7 @@ if [ -d $potdir ]
 	then
 	cd $potdir
 	mv "$potfile.pot" "$slug.pot"
-	cd cwd
+	cd $cwd
 fi
 
 # Install All The Things(tm)
