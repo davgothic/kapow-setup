@@ -24,12 +24,6 @@ if [[ $flag = '-w' ]];
 
 fi
 
-# Replace spaces in slug with hyphens
-if [ $slug ]
-	then
-	slug=${foo// /-}
-fi
-
 # GitHub Kapow URL prefix
 prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/master.zip";
