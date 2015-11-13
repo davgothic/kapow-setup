@@ -142,15 +142,20 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 done
 
 # Rename the .pot file
-potdir="build/wp-content/themes/$slug/languages"
-potfile="my-project"
-rootdir="$PWD"
-
-if [ -d $potdir ]
+if [ $slug ]
 	then
-	cd $potdir
-	mv "$potfile.pot" "$slug.pot"
-	cd $rootdir
+	potdir="build/wp-content/themes/$slug/languages"
+	potfile="my-project"
+	rootdir="$PWD"
+
+	if [ $potdir ]
+		then
+
+		cd $potdir
+		mv "$potfile.pot" "$slug.pot"
+		cd $rootdir
+	fi
+
 fi
 
 # Install All The Things(tm)
