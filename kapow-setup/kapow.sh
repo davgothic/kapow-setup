@@ -144,7 +144,7 @@ done
 # Rename the .pot file
 potdir="build/wp-content/themes/$slug/languages"
 potfile="my-project"
-cwd=$(pwd)
+cwd=pwd
 
 if [ -d $potdir ]
 	then
