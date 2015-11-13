@@ -24,6 +24,12 @@ if [[ $flag = '-w' ]];
 
 fi
 
+# Replace spaces in slug with hyphens
+if [ $slug ]
+	then
+	slug=${foo// /-}
+fi
+
 # GitHub Kapow URL prefix
 prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/master.zip";
@@ -134,6 +140,16 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 
 	fi
 done
+
+# Rename the .pot file
+potdir="build/wp-content/themes/$slug/languages"
+potfile="my-project"
+
+if [ -d $potdir ]
+	then
+	cd $potdir
+	mv "$potfile.pot" "$slug.pot"
+fi
 
 # Install All The Things(tm)
 composer create-project && bower install && npm install
