@@ -144,11 +144,13 @@ done
 # Rename the .pot file
 potdir="build/wp-content/themes/$slug/languages"
 potfile="my-project"
+cwd=$(pwd)
 
 if [ -d $potdir ]
 	then
 	cd $potdir
 	mv "$potfile.pot" "$slug.pot"
+	cd cwd
 fi
 
 # Install All The Things(tm)
