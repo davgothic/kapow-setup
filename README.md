@@ -1,11 +1,11 @@
 # Kapow! Setup
-The setup script for the Kapow! boilerplate/framework for WordPress site development. 
+The setup script for the Kapow! boilerplate for bespoke WordPress site development. 
 
 ## Requirements
 
 You will need the following installed on your system before attempting to set-up a Kapow! project using this guide.
 
-- [VirtualBox](http://www.virtualbox.org/) (or another virtual machine app such as Paralells)
+- [VirtualBox](http://www.virtualbox.org/), [Parallels](http://www.parallels.com) or another virtual machine
 - [Vagrant](https://www.vagrantup.com/)
 - [VVV a.k.a Varying Vagrant Vagrants](https://github.com/Varying-Vagrant-Vagrants/VVV)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -26,6 +26,8 @@ You will need the following installed on your system before attempting to set-up
 3) Make the script executable via the command line using `chmod a+x kapow.sh`.
 
 4) Run the script with `./kapow.sh` and up to five additional parameters to facilitate string replacement across the entire new Kapow! project you've created. 
+
+*TIP: Create an alias called `getkapow` on your machine that invokes one of the above commands to fetch Kapow! before making it executable. Useful if you use Kapow! as much as we do!*
 
 **Kapow! Setup Parameters**
 
@@ -55,4 +57,4 @@ If you'd like to add *Whoosh* to your project, simply add the `-w` flag immediat
 
 `./kapow.sh -w the-avengers "The Avengers" "Nick Fury" nick@fury.com www.avengers.com`
 
-5) After Grunt has finished, run `vagrant up --provision` and view the site using `your-slug.dev`.
+5) After Grunt has finished, run `vagrant up --provision` and view the site using your chosen Project Slug e.g. `the-avengers.dev`.
