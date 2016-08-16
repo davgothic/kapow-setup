@@ -4,12 +4,12 @@
 # Input variables
 flag=$1
 
-if [[ $flag = '-w' ]];
-	# If the Whoosh flag is present,
+if [[ $flag = '-x' ]];
+	# If the Extras flag is present,
 	# define a variable for it.
 	then
 
-	whoosh=$1
+	extras=$1
 	slug=$2
 	nicename=$3
 	authorname=$4
@@ -33,7 +33,7 @@ prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/master.zip";
 
 # Array of Kapow! component names.
-declare -a arr=("skeleton" "sass" "grunt" "theme" "whoosh")
+declare -a arr=("skeleton" "sass" "grunt" "theme" "extras")
 
 # Fetch and extract the archives from GitHub.
 for i in "${arr[@]}"
@@ -87,14 +87,14 @@ if [ -d $themedir ]
 	cp -a $themedir/* build/wp-content/themes/$slug
 fi
 
-# Move Whoosh - if parameter supplied.
-whooshdir="kapow-whoosh-master/kapow-whoosh";
-if [ -d $whooshdir ]
+# Move Extras - if parameter supplied.
+extrasdir="kapow-extras-master/kapow-extras";
+if [ -d $extrasdir ]
 	then
 
-	if [ $whoosh ]
+	if [ $extras ]
 		then
-		cp -af $whooshdir/* .
+		cp -af $extrasdir/* .
 	fi
 fi
 
