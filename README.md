@@ -13,6 +13,8 @@ You will need the following installed on your system before attempting to set-up
 - [Bower](http://bower.io/#install-bower)
 - [Grunt](http://gruntjs.com/installing-grunt)
 
+It is also recommended that you are running WP CLI version `0.24.x` or greater to avoid a fatal error when running the `wp core install...` command which prevents the core WP tables from being added to the database.
+
 ## Installation
 
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
