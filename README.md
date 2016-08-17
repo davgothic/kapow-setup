@@ -13,7 +13,7 @@ You will need the following installed on your system before attempting to set-up
 - [Bower](http://bower.io/#install-bower)
 - [Grunt](http://gruntjs.com/installing-grunt)
 
-It is also recommended that you are running WP CLI version `0.24.x` or greater to avoid a fatal error when running the `wp core install...` command which prevents the core WP tables from being added to the database.
+It is also recommended that you are running WP CLI version `0.24.x` or greater to avoid a fatal error when running the `wp core install...` command which prevents the core WP tables from being added to the database. Run `wp cli update` to upgrade to the latest stable release.
 
 ## Installation
 
