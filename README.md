@@ -48,15 +48,3 @@ An example using all of the above would look like this:
 `./kapow.sh the-avengers "The Avengers" "Nick Fury" nick@fury.com www.avengers.com`
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
-
-**Adding Kapow! Extras**
-
-At [Make Do](http://www.makedo.net) (the brains behind Kapow!) we have a few extra WordPress and Front-end dependencies that are commonly used in the projects we work on.
-
-As we didn't want to make Kapow! any more opinionated than it already is out of the box, we needed to stash our alternative `bower` manifests in a seperate repo that we've decided to call [Kapow! Extras](https://github.com/mkdo/kapow-extras).
-
-If you'd like to add *Extras* to your project, simply add the `-x` flag immediately after your invoke the `kapow.sh` script, but before you pass in any parameters. It should look like this:
-
-`./kapow.sh -x the-avengers "The Avengers" "Nick Fury" nick@fury.com www.avengers.com`
-
-5) After Grunt has finished, run `vagrant up --provision` and view the site using your chosen Project Slug e.g. `the-avengers.dev`.
