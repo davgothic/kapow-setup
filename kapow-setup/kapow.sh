@@ -162,7 +162,7 @@ if [ $slug ]
 fi
 
 # Install All The Things(tm).
-composer create-project && bower install && npm install
+bower install && npm install
 
 # Build the project.
 grunt
