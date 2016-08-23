@@ -4,36 +4,18 @@
 # Input variables
 flag=$1
 
-if [[ $flag = '-x' ]];
-	# If the Extras flag is present,
-	# define a variable for it.
-	then
-
-	extras=$1
-	slug=$2
-	nicename=$3
-	authorname=$4
-	authoremail=$5
-	authorurl=$6
-
-	# Alternatively, just do things
-	# the usual way.
-	else
-
-	slug=$1
-	nicename=$2
-	authorname=$3
-	authoremail=$4
-	authorurl=$5
-
-fi
+slug=$1
+nicename=$2
+authorname=$3
+authoremail=$4
+authorurl=$5
 
 # GitHub Kapow URL prefix & suffix.
 prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/master.zip";
 
 # Array of Kapow! component names.
-declare -a arr=("skeleton" "sass" "grunt" "theme" "extras")
+declare -a arr=("skeleton" "sass" "grunt" "theme")
 
 # Fetch and extract the archives from GitHub.
 for i in "${arr[@]}"
@@ -85,17 +67,6 @@ if [ -d $themedir ]
 	mkdir build/wp-content/themes/$slug
 	chmod 755 build/wp-content/themes/$slug
 	cp -a $themedir/* build/wp-content/themes/$slug
-fi
-
-# Move Extras - if parameter supplied.
-extrasdir="kapow-extras-master/kapow-extras";
-if [ -d $extrasdir ]
-	then
-
-	if [ $extras ]
-		then
-		cp -af $extrasdir/* .
-	fi
 fi
 
 # Remove the archives for good housekeeping.
