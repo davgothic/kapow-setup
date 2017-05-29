@@ -2,17 +2,30 @@
 # -----------------------------------------------------------------------------
 
 # Input variables
-flag=$1
+if [ $1 = 'develop']
+	# Assume first argument is a branch
+	# if the value is `develop`.
+	then
+		branch=$1
+		slug=$2
+		nicename=$3
+		authorname=$4
+		authoremail=$5
+		authorurl=$6
+	# Alternatively, set the variables
+	# as normal.
+	else
+		slug=$1
+		nicename=$2
+		authorname=$3
+		authoremail=$4
+		authorurl=$5
+fi
 
-slug=$1
-nicename=$2
-authorname=$3
-authoremail=$4
-authorurl=$5
 
 # GitHub Kapow URL prefix & suffix.
 prefix="https://github.com/mkdo/kapow-";
-suffix="/archive/master.zip";
+suffix="/archive/$branch.zip";
 
 # Array of Kapow! component names.
 declare -a arr=("skeleton" "sass" "grunt" "theme")
