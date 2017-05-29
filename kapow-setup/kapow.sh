@@ -163,3 +163,33 @@ bower install && npm install
 
 # Build the project.
 grunt
+
+# Append the site config to user's vvv-custom.yml
+# if it exists in the usual location.
+echo "Attempting to manually update your VVV configuration..."
+
+vagrantfile="/Users/$USER/Vagrant/vvv-custom.yml"
+
+if [ -f $vagrantfile ]
+
+	then
+
+	echo "  $slug:
+	    hosts:
+	      - $slug.dev
+	    nginx_upstream: php71" >> $vagrantfile
+
+	echo "$(tput setaf 2)Successfully added a new site configuration for '$slug' to:
+$vagrantfile$(tput setaf 9)"
+
+	else
+
+	echo "$(tput setaf 3)Your vvv-custom.yml file cannot be located!
+
+Please add the following configuration to your file.
+
+$(tput setaf 2)  $slug:
+    hosts:
+      - $slug.dev
+    nginx_upstream: php71$(tput setaf 9)"
+fi
