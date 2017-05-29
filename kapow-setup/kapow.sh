@@ -2,9 +2,9 @@
 # -----------------------------------------------------------------------------
 
 # Input variables
-if [ $1 = 'develop']
+if [ $1 = "develop"]
 	# Assume first argument is a branch
-	# if the value is `develop`.
+	# if the value is develop.
 	then
 		branch=$1
 		slug=$2
