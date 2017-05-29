@@ -29,7 +29,7 @@ prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/$branch.zip";
 
 # Array of Kapow! component names.
-declare -a arr=("skeleton" "sass" "grunt" "theme")
+declare -a arr=("skeleton" "sass" "grunt" "theme", "core")
 
 # Fetch and extract the archives from GitHub.
 for i in "${arr[@]}"
@@ -81,6 +81,18 @@ if [ -d $themedir ]
 	mkdir build/wp-content/themes/$slug
 	chmod 755 build/wp-content/themes/$slug
 	cp -a $themedir/* build/wp-content/themes/$slug
+fi
+
+# Move Core.
+coredir="kapow-core-$branch/kapow-core";
+if [ -d $coredir ]
+	then
+	# Create the core plugin directory, give it
+	# the correct permissions and then
+	# copy the theme files over.
+	mkdir build/wp-content/plugins/kapow-core
+	chmod 755 build/wp-content/plugins/kapow-core
+	cp -a $coredir/* build/wp-content/plugins/kapow-core
 fi
 
 # Remove the archives for good housekeeping.
