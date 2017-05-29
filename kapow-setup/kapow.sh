@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Kapow! Setup Script - Requires a Bash shell on OSX
 # -----------------------------------------------------------------------------
 
@@ -41,7 +42,7 @@ for i in "${arr[@]}"
 done
 
 # Move Skeleton.
-skeldir="kapow-skeleton-master/kapow-skeleton";
+skeldir="kapow-skeleton-$branch/kapow-skeleton";
 if [ -d $skeldir ]
 	then
 	cp -r $skeldir/* .
@@ -49,21 +50,21 @@ if [ -d $skeldir ]
 fi
 
 # Move Sass.
-sassdir="kapow-sass-master/kapow-sass";
+sassdir="kapow-sass-$branch/kapow-sass";
 if [ -d $sassdir ]
 	then
-	cp -a $sassdir/* assets/sass
+	cp -a $sassdir/* assets/scss
 fi
 
 # Move Grunt.
-gruntdir="kapow-grunt-master/kapow-grunt";
+gruntdir="kapow-grunt-$branch/kapow-grunt";
 if [ -d $gruntdir ]
 	then
 	cp -a $gruntdir/* .
 fi
 
 # Move Theme.
-themedir="kapow-theme-master/kapow-theme";
+themedir="kapow-theme-$branch/kapow-theme";
 if [ -d $themedir ]
 	then
 
