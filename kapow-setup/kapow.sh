@@ -179,14 +179,14 @@ if [ -f $vagrantfile ]
 	      - $slug.dev
 	    nginx_upstream: php71" >> $vagrantfile
 
-	echo "$(tput setaf 2)Successfully added a new site configuration for '$slug' to:
+	echo "$(tput setaf 2)Success! New VVV site configured for'$slug' in:
 $vagrantfile$(tput setaf 9)"
 
 	else
 
 	echo "$(tput setaf 3)Your vvv-custom.yml file cannot be located!
 
-Please add the following configuration to your file.
+Please add the following VVV site configuration to your file.
 
 $(tput setaf 2)  $slug:
     hosts:
