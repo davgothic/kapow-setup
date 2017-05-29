@@ -15,13 +15,13 @@ if [ $1 = "develop"]
 	# Alternatively, set the variables
 	# as normal.
 	else
+		branch="master"
 		slug=$1
 		nicename=$2
 		authorname=$3
 		authoremail=$4
 		authorurl=$5
 fi
-
 
 # GitHub Kapow URL prefix & suffix.
 prefix="https://github.com/mkdo/kapow-";
