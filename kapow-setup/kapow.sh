@@ -159,7 +159,7 @@ if [ $slug ]
 fi
 
 # Install All The Things(tm).
-bower install && npm install
+bower install && npm install && composer install
 
 # Build the project.
 grunt
