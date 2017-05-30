@@ -32,6 +32,7 @@ suffix="/archive/$branch.zip";
 declare -a arr=("skeleton" "sass" "grunt" "theme" "core")
 
 # Fetch and extract the archives from GitHub.
+echo "$(tput setaf 3)Downloading Kapow! repositories...$(tput setaf 9)"
 for i in "${arr[@]}"
 	do
 		file="$i.zip"
@@ -40,6 +41,8 @@ for i in "${arr[@]}"
 
 		unzip "$file"
 done
+
+echo "$(tput setaf 3)Scaffolding the instance...$(tput setaf 9)"
 
 # Move Skeleton.
 skeldir="kapow-skeleton-$branch/kapow-skeleton";
@@ -100,6 +103,7 @@ rm ./*.zip
 rm -r kapow-*
 
 # String replacements using input variables
+echo "$(tput setaf 3)Carrying out string replacements...$(tput setaf 9)"
 for file in $(find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'); do
 	if [[ -f $file ]] && [[ -w $file ]]; then
 
@@ -159,14 +163,21 @@ if [ $slug ]
 fi
 
 # Install All The Things(tm).
-bower install && npm install && composer install
+echo "$(tput setaf 3)Installing Bower dependencies...$(tput setaf 9)"
+bower install
+
+echo "$(tput setaf 3)Installing NPM dependencies...$(tput setaf 9)"
+npm install
+
+echo "$(tput setaf 3)Installing Composer dependencies...$(tput setaf 9)"
+composer install
 
 # Build the project.
 grunt
 
 # Append the site config to user's vvv-custom.yml
 # if it exists in the usual location.
-echo "Attempting to manually update your VVV configuration..."
+echo "$(tput setaf 3)Attempting to manually update your VVV configuration...$(tput setaf 9)"
 
 vagrantfile="/Users/$USER/Vagrant/vvv-custom.yml"
 
@@ -179,7 +190,7 @@ if [ -f "$vagrantfile" ]
 	      - $slug.dev
 	    nginx_upstream: php71" >> "$vagrantfile"
 
-	echo "$(tput setaf 2)Success! New VVV site configured for'$slug' in:
+	echo "$(tput setaf 2)A new VVV site has been configured for '$slug' in:
 $vagrantfile$(tput setaf 9)"
 
 	else
@@ -193,3 +204,6 @@ $(tput setaf 2)  $slug:
       - $slug.dev
     nginx_upstream: php71$(tput setaf 9)"
 fi
+
+# Success!
+echo "$(tput setaf 3)Success! Your Kapow! instance has now been created.$(tput setaf 9)"
