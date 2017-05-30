@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 # Input variables
-if [ $1 = "develop" ]
+if [ "$1" = "develop" ]
 	# Assume first argument is a branch
 	# if the value is develop.
 	then
@@ -36,9 +36,9 @@ for i in "${arr[@]}"
 	do
 		file="$i.zip"
 
-		curl -Lo $file $prefix$i$suffix
+		curl -Lo "$file" "$prefix$i$suffix"
 
-		unzip $file
+		unzip "$file"
 done
 
 # Move Skeleton.
@@ -70,7 +70,7 @@ if [ -d $themedir ]
 
 	# If we have no slug, default to the
 	# standard 'my-project' slug.
-	if [ ! $slug ]
+	if [ ! "$slug" ]
 		then
 		slug="my-project"
 	fi
@@ -96,11 +96,11 @@ if [ -d $coredir ]
 fi
 
 # Remove the archives for good housekeeping.
-rm *.zip
+rm ./*.zip
 rm -r kapow-*
 
 # String replacements using input variables
-for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'`; do
+for file in $(find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'); do
 	if [[ -f $file ]] && [[ -w $file ]]; then
 
 		# Author URL - Must come before Slug.
@@ -116,7 +116,7 @@ for file in `find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.p
 		then
 		sed -i "" "s/my-project/$slug/g" "$file"
 
-		underslug=`echo $slug|tr '-' '_'`
+		underslug=$(echo $slug|tr '-' '_')
 		sed -i "" "s/my_project/$underslug/g" "$file"
 		fi
 
@@ -151,9 +151,9 @@ if [ $slug ]
 	if [ $potdir ]
 		then
 
-		cd $potdir
+		cd "$potdir" || exit
 		mv "$potfile.pot" "$slug.pot"
-		cd $rootdir
+		cd "$rootdir" || exit
 	fi
 
 fi
@@ -170,14 +170,14 @@ echo "Attempting to manually update your VVV configuration..."
 
 vagrantfile="/Users/$USER/Vagrant/vvv-custom.yml"
 
-if [ -f $vagrantfile ]
+if [ -f "$vagrantfile" ]
 
 	then
 
 	echo "  $slug:
 	    hosts:
 	      - $slug.dev
-	    nginx_upstream: php71" >> $vagrantfile
+	    nginx_upstream: php71" >> "$vagrantfile"
 
 	echo "$(tput setaf 2)Success! New VVV site configured for'$slug' in:
 $vagrantfile$(tput setaf 9)"
