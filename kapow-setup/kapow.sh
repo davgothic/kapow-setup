@@ -29,7 +29,7 @@ prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/$branch.zip";
 
 # Array of Kapow! component names.
-declare -a arr=("skeleton" "sass" "grunt" "theme", "core")
+declare -a arr=("skeleton" "sass" "grunt" "theme" "core")
 
 # Fetch and extract the archives from GitHub.
 for i in "${arr[@]}"
