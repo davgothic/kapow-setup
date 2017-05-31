@@ -164,8 +164,23 @@ fi
 
 # Core variables that can be overriden by kapow.config.
 skeletonphpversion="71"
+skeletonwpplugins=true
+skeletonwpsalts=true
+skeletonupdateoptions=true
+skeletonwptestdata=true
+skeletonprecommitwpcs=true
+sassnormalize=true
+sassframework="noframework"
+gruntlintphp=false
+gruntlintscss=false
+gruntlintjs=false
+gruntdocumentphp=false
+gruntdocumentscss=false
+gruntdocumentjs=false
+gruntlegacybrowsers=false
 
 # Import the Kapow! config file if it exists.
+echo "$(tput setaf 3)Checking for Kapow! configuration file...$(tput setaf 9)"
 configfile="kapow.config"
 if [ -f $configfile ]
 	then
@@ -173,7 +188,16 @@ if [ -f $configfile ]
 fi
 
 # Implement Kapow! config settings.
-# @todo
+# For reference, the variables in the vvv-init.sh
+# script are set as follows:
+#
+# plugins=true
+# salts=true
+# options=true
+# testdata=true
+# precommit=true
+echo "$(tput setaf 3)Configuring Kapow! instance...$(tput setaf 9)"
+# @todo - Script all the core variable updates!
 
 # Install All The Things(tm).
 echo "$(tput setaf 3)Installing Bower dependencies...$(tput setaf 9)"
