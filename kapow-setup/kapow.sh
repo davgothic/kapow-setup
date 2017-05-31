@@ -162,6 +162,12 @@ if [ $slug ]
 
 fi
 
+# Import the Kapow! config file.
+source kapow.config
+
+# Implement Kapow! config settings.
+# @todo
+
 # Install All The Things(tm).
 echo "$(tput setaf 3)Installing Bower dependencies...$(tput setaf 9)"
 bower install
@@ -204,6 +210,11 @@ $(tput setaf 2)  $slug:
       - $slug.dev
     nginx_upstream: php71$(tput setaf 9)"
 fi
+
+# Remove Kapow! Setup!
+echo "$(tput setaf 3)Removing Kapow! Setup files..."
+rm kapow.sh
+rm kapow.config
 
 # Success!
 echo "$(tput setaf 3)Success! Your Kapow! instance has now been created.$(tput setaf 9)"
