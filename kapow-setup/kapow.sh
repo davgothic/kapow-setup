@@ -104,7 +104,7 @@ rm -r kapow-*
 
 # String replacements using input variables
 echo "$(tput setaf 3)Carrying out string replacements...$(tput setaf 9)"
-for file in $(find .  -type f ! -name 'kapow.sh' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'); do
+for file in $(find .  -type f ! -name 'kapow.sh' ! -name 'kapow.config' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'); do
 	if [[ -f $file ]] && [[ -w $file ]]; then
 
 		# Author URL - Must come before Slug.
@@ -162,8 +162,15 @@ if [ $slug ]
 
 fi
 
-# Import the Kapow! config file.
-source kapow.config
+# Core variables that can be overriden by kapow.config.
+skeletonphpversion="71"
+
+# Import the Kapow! config file if it exists.
+configfile="kapow.config"
+if [ -f $configfile ]
+	then
+		source kapow.config
+fi
 
 # Implement Kapow! config settings.
 # @todo
@@ -194,7 +201,7 @@ if [ -f "$vagrantfile" ]
 	echo "  $slug:
 	    hosts:
 	      - $slug.dev
-	    nginx_upstream: php71" >> "$vagrantfile"
+	    nginx_upstream: php$skeletonphpversion" >> "$vagrantfile"
 
 	echo "$(tput setaf 2)A new VVV site has been configured for '$slug' in:
 $vagrantfile$(tput setaf 9)"
@@ -208,7 +215,7 @@ Please add the following VVV site configuration to your file.
 $(tput setaf 2)  $slug:
     hosts:
       - $slug.dev
-    nginx_upstream: php71$(tput setaf 9)"
+    nginx_upstream: php$skeletonphpversion$(tput setaf 9)"
 fi
 
 # Remove Kapow! Setup!
