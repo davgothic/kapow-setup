@@ -107,43 +107,49 @@ echo "$(tput setaf 3)Carrying out string replacements...$(tput setaf 9)"
 for file in $(find .  -type f ! -name 'kapow.sh' ! -name 'kapow.config' ! -name '.DS_Store' ! -name '*.png' ! -name '*.mo'); do
 	if [[ -f $file ]] && [[ -w $file ]]; then
 
+		# This is needed in order for this script to work with BSD & GNU sed
+		bakfile=".bak"
+
 		# Author URL - Must come before Slug.
 		# We use hash as the delimiter string here to ensure that any slashes in
 		# the url string don't mess things up.
 		if [[ $authorurl ]]
 		then
-		sed -i "" "s#http://my-project.com#http://$authorurl#g" "$file"
+		sed -i$bakfile "s#http://my-project.com#http://$authorurl#g" "$file"
 		fi
 
 		# Slug - hyphen and underscore replacements.
 		if [[ $slug ]]
 		then
-		sed -i "" "s/my-project/$slug/g" "$file"
+		sed -i$bakfile "s/my-project/$slug/g" "$file"
 
 		underslug=$(echo $slug|tr '-' '_')
-		sed -i "" "s/my_project/$underslug/g" "$file"
+		sed -i$bakfile "s/my_project/$underslug/g" "$file"
 		fi
 
 		# Nice Name.
 		if [[ $nicename ]]
 		then
-		sed -i "" "s/My Project/$nicename/g" "$file"
+		sed -i$bakfile "s/My Project/$nicename/g" "$file"
 		fi
 
 		# Author Name.
 		if [[ $authorname ]]
 		then
-		sed -i "" "s/Author Name/$authorname/g" "$file"
+		sed -i$bakfile "s/Author Name/$authorname/g" "$file"
 		fi
 
 		# Author Email.
 		if [[ $authoremail ]]
 		then
-		sed -i "" "s/hello@my-project.com/$authoremail/g" "$file"
+		sed -i$bakfile "s/hello@my-project.com/$authoremail/g" "$file"
 		fi
 
 	fi
 done
+
+# Remove all the .bak files
+find . -name '*.bak' -delete
 
 # Rename the .pot file
 if [ $slug ]
