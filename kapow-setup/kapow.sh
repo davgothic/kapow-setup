@@ -209,6 +209,16 @@ npm install
 echo "$(tput setaf 3)Installing Composer dependencies...$(tput setaf 9)"
 composer install
 
+# Modify the Git pre-commit hook to write PHPCS output to file.
+precommitfile=".git/hooks/pre-commit"
+precommittarget="--standard=./phpcs.xml"
+precommitextra=" --report-full=./reports/wpcs.md"
+if [ -f "$precommitfile" ]
+	then
+
+	sed -i "" "s/$precommittarget/$precommittarget$precommitextra/g" "$precommitfile"
+fi
+
 # Build the project.
 grunt
 
@@ -217,7 +227,6 @@ grunt
 echo "$(tput setaf 3)Attempting to manually update your VVV configuration...$(tput setaf 9)"
 
 vagrantfile="/Users/$USER/Vagrant/vvv-custom.yml"
-
 if [ -f "$vagrantfile" ]
 
 	then
