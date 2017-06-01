@@ -212,11 +212,11 @@ composer install
 # Modify the Git pre-commit hook to write PHPCS output to file.
 precommitfile=".git/hooks/pre-commit"
 precommittarget="--standard=./phpcs.xml"
-precommitextra=" --report-full=./reports/wpcs.md"
+precommitextra="--report-full=./reports/wpcs.md"
 if [ -f "$precommitfile" ]
 	then
 
-	sed -i "" "s/$precommittarget/$precommittarget$precommitextra/g" "$precommitfile"
+	sed -i "" "s#$precommittarget#$precommittarget $precommitextra#g" "$precommitfile"
 fi
 
 # Build the project.
