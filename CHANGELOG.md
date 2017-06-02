@@ -1,117 +1,100 @@
-# Changelog 
+## Change Log
 
-2016-08-16 - **Updated to factor in renaming of Kapow! Whoosh to Kapow! Extras** (e743ca1)
-
-2016-05-17 - **Merge branch 'master' of github.com:mkdo/kapow-setup** (be8f18d)
-
-2016-05-17 - **Updated comments** (06fff1d)
-
-2016-05-17 - **Update README.md** (545a9cd)
-
-2015-11-13 - **Rolled back slug space replacement as anything after the space will be parameter two! Derp.** (e0fc962)
-
-2015-11-13 - **Added more logic to the .pot file renaming** (b710b17)
-
-2015-11-13 - **Fix** (961f3e2)
-
-2015-11-13 - **Fix** (1ce33bb)
-
-2015-11-13 - **Typo** (94a61bc)
-
-2015-11-13 - **Change back to project root after pot file rename** (3dd090f)
-
-2015-11-13 - **Handled spaces in the slug and added .pot file renaming** (bbc2788)
-
-2015-11-11 - **Update README.md** (63d0497)
-
-2015-11-11 - **Update README.md** (7865684)
-
-2015-11-11 - **Update README.md** (eac69e1)
-
-2015-11-11 - **Update README.md** (b7f9215)
-
-2015-11-11 - **Update README.md** (de87140)
-
-2015-11-11 - **Update README.md** (856ec9b)
-
-2015-11-11 - **Update README.md** (8d90e9d)
-
-2015-11-11 - **Update README.md** (3553536)
-
-2015-11-11 - **Update README.md** (ea59a03)
-
-2015-11-11 - **Update README.md** (ddfd47b)
-
-2015-11-11 - **Update README.md** (76254c7)
-
-2015-11-11 - **Corrected chmod syntax error** (cf56ffb)
-
-2015-11-11 - **Added support for Whoosh via the -w flag** (8360d87)
-
-2015-11-10 - **Update README.md** (a34f1b9)
-
-2015-11-10 - **Update CONTRIBUTING.md** (993af7a)
-
-2015-11-10 - **Updated string replacements** (bfb5cc4)
-
-2015-11-10 - **Update README.md** (c6705fb)
-
-2015-10-23 - **Update README.md** (9901aae)
-
-2015-10-23 - **Update README.md** (28cfa29)
-
-2015-10-23 - **Update kapow.sh** (eb85d66)
-
-2015-10-22 - **Create CONTRIBUTING.md** (fc8552e)
-
-2015-10-22 - **Delete kapow.sh** (fc2921e)
-
-2015-10-22 - **Create kapow.sh** (e036af2)
-
-2015-10-22 - **Delete .gitignore** (de2070d)
-
-2015-10-19 - **Added grunt and updated comments** (9fb2e2a)
-
-2015-10-19 - **Update README.md** (0f14b60)
-
-2015-10-19 - **Update README.md** (112cabb)
-
-2015-10-19 - **Update README.md** (f4aec06)
-
-2015-10-19 - **Update README.md** (35067af)
-
-2015-10-19 - **Update README.md** (dbccf96)
-
-2015-10-19 - **Update README.md** (f39faab)
-
-2015-10-19 - **Added URL parameter** (df90548)
-
-2015-10-19 - **Update README.md** (20ede0e)
-
-2015-10-19 - **Added string replacements and other tweaks** (dbd9aea)
-
-2015-10-19 - **Update README.md** (50b80d3)
-
-2015-10-19 - **Update README.md** (a68e226)
-
-2015-10-19 - **Update README.md** (0391688)
-
-2015-10-19 - **Update README.md** (5b73668)
-
-2015-10-19 - **Update README.md** (d66e140)
-
-2015-10-19 - **Updated to work with more recent Kapow!** (0e24a0e)
-
-2015-08-28 - **Merge branch 'master' of github.com:mkdo/kapow-test-suite** (bd145a0)
-
-2015-08-28 - **Updated the script to add the WP submodule** (efe4ac9)
-
-2015-08-28 - **Update README.md** (3c5db46)
-
-2015-08-28 - **Ignored Kapow folder to prevent commiting test suite** (3b8deb6)
-
-2015-08-28 - **Finished bash script** (6ca8fa7)
-
-2015-08-28 - **Update README.md** (03bb5d4)
-
-2015-08-28 - **Initial commit** (9a6a6c1)
+### v2.0.0 01/06/2017
+- [0999d00](https://github.com/mkdo/kapow-setup/commit/0999d00c47660900d68530bb15a337f44b1e4242) Attempted fix for GNU/BSD sed inconsistency (@davetgreen)
+- [e50cc58](https://github.com/mkdo/kapow-setup/commit/e50cc585ab8dc75d81fbc5bae436ba8192897ba9) Script tweaks and sed string replacement bug fix. (@davetgreen)
+- [0e89534](https://github.com/mkdo/kapow-setup/commit/0e89534b4aeb83b4d0cfda87e12b7e7070dc926a) Added in modification of the pre-commit hook to pipe PHPCS report output to file. (@davetgreen)
+- [0ffa540](https://github.com/mkdo/kapow-setup/commit/0ffa540fd2cc77ea2672674db9740a976ad07cf0) More progress with integrating kapow.config (@davetgreen)
+- [b24e80e](https://github.com/mkdo/kapow-setup/commit/b24e80eb97c70fd72dbeb1e5768406cf4d944983) More progress on kapow.config (@davetgreen)
+- [e8a683d](https://github.com/mkdo/kapow-setup/commit/e8a683d78af9f1b0524693837e62e8eafef4a086) Tweaked comments. (@davetgreen)
+- [2e13f5e](https://github.com/mkdo/kapow-setup/commit/2e13f5edb04f8eb7f87437de47ddc87d632ab226) Started work on kapow.config for use with setup script. (@davetgreen)
+- [87bca6f](https://github.com/mkdo/kapow-setup/commit/87bca6f2871c96b8b95a6be21f29197a65e63840) More verbose progress reporting. (@davetgreen)
+- [dac2cad](https://github.com/mkdo/kapow-setup/commit/dac2cada8a598f70db428dacac0aaecb98b6692f) Shell script updates after running through ShellCheck.net (@davetgreen)
+- [55b8b5b](https://github.com/mkdo/kapow-setup/commit/55b8b5b861bbb64d0b4b4b428c4e57f9fb7f24e3) Trigger composer install after the project has been scaffolded. (@davetgreen)
+- [93e7864](https://github.com/mkdo/kapow-setup/commit/93e78649767d46873dcfead93355034a2ea15f8d) Corrected typo preventing theme clone. (@davetgreen)
+- [54ef99d](https://github.com/mkdo/kapow-setup/commit/54ef99d8358874d74bc09e21a3d45f8034e4758f) Slight wording change (@davetgreen)
+- [b7995eb](https://github.com/mkdo/kapow-setup/commit/b7995eb5039eaa5475c66719c423be1268af49e7) The script can now add a site config to vvv-custom.yml if it exists at the usual OSX Vagrant path. Closes #7 (@davetgreen)
+- [cfc2691](https://github.com/mkdo/kapow-setup/commit/cfc2691700483a8f0c637cd7cee1c41221b0df9d) Updated script to pull in Kapow! Core module. Closes #6 (@davetgreen)
+- [3ba224c](https://github.com/mkdo/kapow-setup/commit/3ba224c21e2a305377f28fc99688eb653bc25b62) Various bug fixes. Closes #8 (@davetgreen)
+- [c4307df](https://github.com/mkdo/kapow-setup/commit/c4307df78f8da601367c6f5cccca7fc09239d610) Fixed typo (@davetgreen)
+- [5c081fe](https://github.com/mkdo/kapow-setup/commit/5c081feaddff024af4bb64b22a415e2f4f8fe907) Another bug fix (@davetgreen)
+- [293e49a](https://github.com/mkdo/kapow-setup/commit/293e49a14d1ca9c75b9f9e360bb6fda4c17566e3) Bug fix (@davetgreen)
+- [f40b370](https://github.com/mkdo/kapow-setup/commit/f40b3706ee04431f98acee36f1029d73f938ff4e) Added develop flag. (@davetgreen)
+- [f2f4325](https://github.com/mkdo/kapow-setup/commit/f2f4325ce62d8426d704262be6ce04f8006536bd) Create LICENSE (@davetgreen)
+- [65931a1](https://github.com/mkdo/kapow-setup/commit/65931a142454eb0f0291c9794c31e2c66bd18239) Update CONTRIBUTING.md (@davetgreen)
+- [5f32669](https://github.com/mkdo/kapow-setup/commit/5f326697d83e9b8461bfd6e980425fe034ad92a0) Update ISSUE_TEMPLATE.md (@davetgreen)
+- [3516bac](https://github.com/mkdo/kapow-setup/commit/3516bac7ed4d8edecf7a161f93e487ec61ea20d0) Create PULL_REQUEST_TEMPLATE.md (@davetgreen)
+- [1b6637d](https://github.com/mkdo/kapow-setup/commit/1b6637d879aaca3280a8482965d9496b4bac2e15) Create ISSUE_TEMPLATE.md (@davetgreen)
+- [c3fa3ec](https://github.com/mkdo/kapow-setup/commit/c3fa3ecf03c41bc57ccc78c52420882479767d6c) Rename CONTRIBUTING.md to .github/CONTRIBUTING.md (@davetgreen)
+- [050a35b](https://github.com/mkdo/kapow-setup/commit/050a35bcf7968e218bc524528439f4bdb3221091) Removed support for Kapow! Extras. (@davetgreen)
+- [de9de1e](https://github.com/mkdo/kapow-setup/commit/de9de1eb5b63def93ec7245d6bcf62db14d87251) Removed Kapow! Extras section. (@davetgreen)
+- [#1](https://github.com/mkdo/kapow-setup/pull/1) Merge pull request #1 from mkdo/remove-composer-from-kapow (@mkdo)
+- [#2](https://github.com/mkdo/kapow-setup/pull/2) Merge pull request #2 from mkdo/remove-composer-from-readme (@mkdo)
+- [44f49ab](https://github.com/mkdo/kapow-setup/commit/44f49abb51346e295473ca641a602a07c47e3ead) Remove Composer from README (@mwtsn)
+- [610213d](https://github.com/mkdo/kapow-setup/commit/610213d516bd79ed680e786a9846b586474dec99) Remove Composer from Kapow (@mwtsn)
+- [c526af9](https://github.com/mkdo/kapow-setup/commit/c526af946924b2982c47a4f58288aff6f4725414) Removed example file (@davetgreen)
+- [d4abdd1](https://github.com/mkdo/kapow-setup/commit/d4abdd1ab894e78f7214e1ffcf37a092de6ca517) Added test file (@davetgreen)
+- [a9207aa](https://github.com/mkdo/kapow-setup/commit/a9207aa0375eae376143786b7f3c9f0a5879280b) Removed test file. (@davetgreen)
+- [c6bc64b](https://github.com/mkdo/kapow-setup/commit/c6bc64b2e1216c7561cae538e4ee543747beeadb) Merge branch 'master' of github.com:mkdo/kapow-setup (@davetgreen)
+- [4a9b127](https://github.com/mkdo/kapow-setup/commit/4a9b1274a1e8b494c76f0a70fe21ffeb6dea4f8e) Testing Git pre-push hook (@davetgreen)
+- [37c4f78](https://github.com/mkdo/kapow-setup/commit/37c4f78be290058bd03b87027af5137c0c5e58be) Update README.md (@davetgreen)
+- [6a22960](https://github.com/mkdo/kapow-setup/commit/6a229609ba27bc343d8b72cf7c60c63bec51bf2f) Update README.md (@davetgreen)
+- [dafd414](https://github.com/mkdo/kapow-setup/commit/dafd414479157bc8d3641003ffbb2e46d6e2d3ec) Updated changelog (@davetgreen)
+- [e743ca1](https://github.com/mkdo/kapow-setup/commit/e743ca13b7679ddbb755897439481642cefb1317) Updated to factor in renaming of Kapow! Whoosh to Kapow! Extras (@davetgreen)
+- [be8f18d](https://github.com/mkdo/kapow-setup/commit/be8f18d8e0b3de3a7a8385f171449967c1075399) Merge branch 'master' of github.com:mkdo/kapow-setup (@davetgreen)
+- [06fff1d](https://github.com/mkdo/kapow-setup/commit/06fff1d6030c70e68742c73d6d7ede4302b5dc31) Updated comments (@davetgreen)
+- [545a9cd](https://github.com/mkdo/kapow-setup/commit/545a9cd10a60c8353766d39037089a2335fa06ab) Update README.md (@davetgreen)
+- [e0fc962](https://github.com/mkdo/kapow-setup/commit/e0fc962b907d66e1dd5fb17fe3cc19679426ec56) Rolled back slug space replacement as anything after the space will be parameter two! Derp. (@davetgreen)
+- [b710b17](https://github.com/mkdo/kapow-setup/commit/b710b1716f582bc0a8200e035226a746bdf16aa3) Added more logic to the .pot file renaming (@davetgreen)
+- [961f3e2](https://github.com/mkdo/kapow-setup/commit/961f3e248be1d28fee730a8f0af2b32d32193d5a) Fix (@davetgreen)
+- [1ce33bb](https://github.com/mkdo/kapow-setup/commit/1ce33bb21c542fae36411b59ac1ed1e45aa5283c) Fix (@davetgreen)
+- [94a61bc](https://github.com/mkdo/kapow-setup/commit/94a61bc9dac426d2de514cfcc4a7c920b29dcd21) Typo (@davetgreen)
+- [3dd090f](https://github.com/mkdo/kapow-setup/commit/3dd090f4910fc85261cd18de60a902b855825b03) Change back to project root after pot file rename (@davetgreen)
+- [bbc2788](https://github.com/mkdo/kapow-setup/commit/bbc2788610d38ae6dca8c08a74d8ad8abb544656) Handled spaces in the slug and added .pot file renaming (@davetgreen)
+- [63d0497](https://github.com/mkdo/kapow-setup/commit/63d049763da0bcaabfb8b716f01e81f5eb52c2fc) Update README.md (@davetgreen)
+- [7865684](https://github.com/mkdo/kapow-setup/commit/78656844de9da28dcd50bf17ce4942b571724666) Update README.md (@davetgreen)
+- [eac69e1](https://github.com/mkdo/kapow-setup/commit/eac69e1cf6cc06e63443f5236146ad02c8470e68) Update README.md (@davetgreen)
+- [b7f9215](https://github.com/mkdo/kapow-setup/commit/b7f92155f81d59f1ddb44919e8f0ef7bbf78893e) Update README.md (@davetgreen)
+- [de87140](https://github.com/mkdo/kapow-setup/commit/de87140695150808a0158e7a3e309e8cdb85fc76) Update README.md (@davetgreen)
+- [856ec9b](https://github.com/mkdo/kapow-setup/commit/856ec9be664981dec8c8b5021ccce73911aa18c0) Update README.md (@davetgreen)
+- [8d90e9d](https://github.com/mkdo/kapow-setup/commit/8d90e9d59b1b7aaf5ffee109886bb5d61deb9af6) Update README.md (@davetgreen)
+- [3553536](https://github.com/mkdo/kapow-setup/commit/3553536a653e810c45bc918b7a0029e21e9b1283) Update README.md (@davetgreen)
+- [ea59a03](https://github.com/mkdo/kapow-setup/commit/ea59a03c0671ecf7180d83d33d32e128f1348b97) Update README.md (@davetgreen)
+- [ddfd47b](https://github.com/mkdo/kapow-setup/commit/ddfd47bbb4124f1a0a6a02673427b5a866ad519f) Update README.md (@davetgreen)
+- [76254c7](https://github.com/mkdo/kapow-setup/commit/76254c7c37f49e3be698fb11b789c7381635c74d) Update README.md (@davetgreen)
+- [cf56ffb](https://github.com/mkdo/kapow-setup/commit/cf56ffb824d5520f70be531ece9f95003644f10c) Corrected chmod syntax error (@davetgreen)
+- [8360d87](https://github.com/mkdo/kapow-setup/commit/8360d873bd0a3606d46aee18ef851e74ad11bdd8) Added support for Whoosh via the -w flag (@davetgreen)
+- [a34f1b9](https://github.com/mkdo/kapow-setup/commit/a34f1b93dc714482f8afdca35d52f1ac5c8372c7) Update README.md (@davetgreen)
+- [993af7a](https://github.com/mkdo/kapow-setup/commit/993af7a1da416586d60c7c045db76b0480f7a59b) Update CONTRIBUTING.md (@davetgreen)
+- [bfb5cc4](https://github.com/mkdo/kapow-setup/commit/bfb5cc4394922c87565214354b6bd4cc27569a0a) Updated string replacements (@davetgreen)
+- [c6705fb](https://github.com/mkdo/kapow-setup/commit/c6705fb84c388508b0ed99585599ed8f0da309bd) Update README.md (@davetgreen)
+- [9901aae](https://github.com/mkdo/kapow-setup/commit/9901aae974ad86f72c7a663e31522afa49092202) Update README.md (@davetgreen)
+- [28cfa29](https://github.com/mkdo/kapow-setup/commit/28cfa290505a9d267cc33ef02e15489d4aad47d2) Update README.md (@davetgreen)
+- [eb85d66](https://github.com/mkdo/kapow-setup/commit/eb85d66604541cc6baa6f60ea5bae252781f5d1a) Update kapow.sh (@davetgreen)
+- [fc8552e](https://github.com/mkdo/kapow-setup/commit/fc8552e2989db7c9934644f4873b566b2dcbe210) Create CONTRIBUTING.md (@davetgreen)
+- [fc2921e](https://github.com/mkdo/kapow-setup/commit/fc2921e1b136719d291c1925f362fdca47a261b7) Delete kapow.sh (@davetgreen)
+- [e036af2](https://github.com/mkdo/kapow-setup/commit/e036af2c043599ee9135ace1bdbd5c2f90dd2dfa) Create kapow.sh (@davetgreen)
+- [de2070d](https://github.com/mkdo/kapow-setup/commit/de2070df87352d3ac14215445de3230cfe3a5f67) Delete .gitignore (@davetgreen)
+- [9fb2e2a](https://github.com/mkdo/kapow-setup/commit/9fb2e2a04a24dc382c82315e2e782e49f1126fd7) Added grunt and updated comments (@davetgreen)
+- [0f14b60](https://github.com/mkdo/kapow-setup/commit/0f14b60c0ee495bb826702483ce30b6cb0d3d808) Update README.md (@davetgreen)
+- [112cabb](https://github.com/mkdo/kapow-setup/commit/112cabb2251a0ec786e3d4d7b2d3ee672b236ce3) Update README.md (@davetgreen)
+- [f4aec06](https://github.com/mkdo/kapow-setup/commit/f4aec061c262f8927f177e40628e3e7b6a2bfb0a) Update README.md (@davetgreen)
+- [35067af](https://github.com/mkdo/kapow-setup/commit/35067af1ca897efa743bc22a66592fc4965724a2) Update README.md (@davetgreen)
+- [dbccf96](https://github.com/mkdo/kapow-setup/commit/dbccf96b25f11e3694103e6e507f0b8bfbc082c5) Update README.md (@davetgreen)
+- [f39faab](https://github.com/mkdo/kapow-setup/commit/f39faab2afbf52ff654aa34efe0b951509cce4ad) Update README.md (@davetgreen)
+- [df90548](https://github.com/mkdo/kapow-setup/commit/df905481e242296da3b94ec70ee9ed7aa7376fa2) Added URL parameter (@davetgreen)
+- [20ede0e](https://github.com/mkdo/kapow-setup/commit/20ede0e985119b24d19741993fafcb73d3986742) Update README.md (@davetgreen)
+- [dbd9aea](https://github.com/mkdo/kapow-setup/commit/dbd9aea9191631be8dce8f74264cb4d9c7bcd9c6) Added string replacements and other tweaks (@davetgreen)
+- [50b80d3](https://github.com/mkdo/kapow-setup/commit/50b80d3e3fb7c023c752623e369b5f4319cd1940) Update README.md (@davetgreen)
+- [a68e226](https://github.com/mkdo/kapow-setup/commit/a68e226f32621fe7217f4908ee6ef9b16f7b9a41) Update README.md (@davetgreen)
+- [0391688](https://github.com/mkdo/kapow-setup/commit/0391688bf6922b675be629abeefaa730511726e0) Update README.md (@davetgreen)
+- [5b73668](https://github.com/mkdo/kapow-setup/commit/5b736684c4e8fedbcc5a2506969a31849c1c6691) Update README.md (@davetgreen)
+- [d66e140](https://github.com/mkdo/kapow-setup/commit/d66e140c73189d988f58f47cea162e980ae370b7) Update README.md (@davetgreen)
+- [0e24a0e](https://github.com/mkdo/kapow-setup/commit/0e24a0e3b232336a61da942fa941271b2bd07128) Updated to work with more recent Kapow! (@davetgreen)
+- [bd145a0](https://github.com/mkdo/kapow-setup/commit/bd145a0fb07ed5a36b6594d746ac4d6dc457dd39) Merge branch 'master' of github.com:mkdo/kapow-test-suite (@davetgreen)
+- [efe4ac9](https://github.com/mkdo/kapow-setup/commit/efe4ac9cadccfb6a3ab8cc8930fcfb88c6177122) Updated the script to add the WP submodule (@davetgreen)
+- [3c5db46](https://github.com/mkdo/kapow-setup/commit/3c5db46822e625ba75792fb17a29eeecc4810c9b) Update README.md (@davetgreen)
+- [3b8deb6](https://github.com/mkdo/kapow-setup/commit/3b8deb66d8e5105b0262d2bb5e62c59f32a6b448) Ignored Kapow folder to prevent commiting test suite (@davetgreen)
+- [6ca8fa7](https://github.com/mkdo/kapow-setup/commit/6ca8fa7814883d04f8bee2071326c9369b072bb5) Finished bash script (@davetgreen)
+- [03bb5d4](https://github.com/mkdo/kapow-setup/commit/03bb5d4092d4567ed951f98d10f45112234c5eca) Update README.md (@davetgreen)
+- [9a6a6c1](https://github.com/mkdo/kapow-setup/commit/9a6a6c1519888538d0628ad18fa33567ab528abc) Initial commit (@davetgreen)
