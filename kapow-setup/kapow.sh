@@ -238,9 +238,9 @@ if [ -f "$vagrantfile" ]
 	then
 
 	echo "  $slug:
-	    hosts:
-	      - $slug.dev
-	    nginx_upstream: php$skeletonphpversion" >> "$vagrantfile"
+    hosts:
+      - $slug.dev
+    nginx_upstream: php$skeletonphpversion" >> "$vagrantfile"
 
 	echo "$(tput setaf 2)A new VVV site has been configured for '$slug' in:
 $vagrantfile$(tput setaf 9)"
