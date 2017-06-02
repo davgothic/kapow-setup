@@ -1,7 +1,7 @@
 # Kapow! Setup
 The setup script for the Kapow! boilerplate for bespoke WordPress site development. 
 
-## Requirements
+## [Requirements](#requirements)
 
 You will need the following installed on your system before attempting to set-up a Kapow! based project using this guide:
 
@@ -19,7 +19,7 @@ If you don't plan on developing within the confines of a `vagrant ssh` session, 
 
 WP CLI version `0.24.x` or greater is required to avoid a fatal error when Vagrant runs the the `wp core install...` command, which prevents the core WP tables from being added to the database. Run `wp cli update` to upgrade to the latest stable release.
 
-## Installation
+## [Installation](#installation)
 
 1) Create a new folder in your Vagrant web root e.g. `Vagrant/www/my-project`.
 
@@ -45,7 +45,7 @@ WP CLI version `0.24.x` or greater is required to avoid a fatal error when Vagra
 
 Once your Vagrant configuration has been updated, you're ready to provision the site using `vagrant provision --provision-with=site-stark-industries` for example.
 
-**Kapow! Command Line Parameters**
+**[Command Line Parameters](#command-line-parameters)**
 
 The parameters must be added in the following order:
 
@@ -63,6 +63,6 @@ An example using all of the above would look like this:
 
 *NB: Strings containing spaces must be encapsulated in double quotes.*
 
-**Kapow! Configuration Paramaters**
+**[Configuration Paramaters](#configuration-parameters)**
 
 More info coming soon...
