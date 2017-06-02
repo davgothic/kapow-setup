@@ -1,6 +1,10 @@
 ## Change Log
 
-### v2.0.0 01/06/2017
+### v2.0.0 02/06/2017
+- [e189c88](https://github.com/mkdo/kapow-setup/commit/e189c88cf3f9a63b7be91d9b5418ad898b68be92) Whitespace tweak to prevent provisioning issues. (@davetgreen)
+- [a9d6f25](https://github.com/mkdo/kapow-setup/commit/a9d6f258b9c8dd6f1ee0e820fed0f5f9cd1777c2) Added anchors to README headings (@davetgreen)
+- [76d8b70](https://github.com/mkdo/kapow-setup/commit/76d8b70451919bed41be96559a49e96d3de0421b) Updated README (@davetgreen)
+- [c94326f](https://github.com/mkdo/kapow-setup/commit/c94326f16701c046f52b108fc61cc36f4a8465f8) Updated CHANGELOG. (@davetgreen)
 - [0999d00](https://github.com/mkdo/kapow-setup/commit/0999d00c47660900d68530bb15a337f44b1e4242) Attempted fix for GNU/BSD sed inconsistency (@davetgreen)
 - [e50cc58](https://github.com/mkdo/kapow-setup/commit/e50cc585ab8dc75d81fbc5bae436ba8192897ba9) Script tweaks and sed string replacement bug fix. (@davetgreen)
 - [0e89534](https://github.com/mkdo/kapow-setup/commit/0e89534b4aeb83b4d0cfda87e12b7e7070dc926a) Added in modification of the pre-commit hook to pipe PHPCS report output to file. (@davetgreen)
