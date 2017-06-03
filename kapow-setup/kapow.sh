@@ -286,6 +286,21 @@ rm kapow.config
 # Success!
 echo "$(tput setaf 3)Success! Your Kapow! instance has now been created.$(tput setaf 9)"
 
+# Commit and push to repo now or not?
+printf "$(tput setaf 3)Would you like to commit and push now? (y|n) "
+read -e COMMITPUSH
+echo
+
+gitdir=".git"
+if [ "$COMMITPUSH" = "y" ] && [ -d $gitdir ]
+	then
+
+	echo "$(tput setaf 3)Committing and pushing to repo...$(tput setaf 9)"
+	git add .
+	git commit -m "Initial Kapow! instance."
+	git push
+fi
+
 # Provision now or not?
 printf "$(tput setaf 3)Would you like to provision this site now? (y|n) "
 read -e PROVISION
