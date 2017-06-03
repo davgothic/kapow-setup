@@ -1,6 +1,10 @@
 ## Change Log
 
-### v2.0.0 02/06/2017
+### v2.0.0 03/06/2017
+- [f4fb85d](https://github.com/mkdo/kapow-setup/commit/f4fb85d7e051a5460bdeee019f6511fc8b1f0175) Added option to push files to the repo. (@davetgreen)
+- [30dc53f](https://github.com/mkdo/kapow-setup/commit/30dc53f9683a9028b28cd7fe2914f83410a55222) Kapow Project Core now pulled in, other minor tweaks. (@davetgreen)
+- [da3b1d3](https://github.com/mkdo/kapow-setup/commit/da3b1d317de82c0eb26f0f56398f6330a4bed0a6) Further important updates for 2.0.0 release. (@davetgreen)
+- [594c42f](https://github.com/mkdo/kapow-setup/commit/594c42f9a0de74f9755d486fec47bed4e62f0a29) Updated CHANGELOG (@davetgreen)
 - [e189c88](https://github.com/mkdo/kapow-setup/commit/e189c88cf3f9a63b7be91d9b5418ad898b68be92) Whitespace tweak to prevent provisioning issues. (@davetgreen)
 - [a9d6f25](https://github.com/mkdo/kapow-setup/commit/a9d6f258b9c8dd6f1ee0e820fed0f5f9cd1777c2) Added anchors to README headings (@davetgreen)
 - [76d8b70](https://github.com/mkdo/kapow-setup/commit/76d8b70451919bed41be96559a49e96d3de0421b) Updated README (@davetgreen)
