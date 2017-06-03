@@ -2,6 +2,8 @@
 # Kapow! Setup Script - Requires a Bash shell on OSX
 # -----------------------------------------------------------------------------
 
+echo "$(tput setaf 2)Initialising Kapow! Setup script...$(tput setaf 9)"
+
 # Input variables
 if [ "$1" = "develop" ]
 	# Assume first argument is a branch
@@ -29,7 +31,7 @@ prefix="https://github.com/mkdo/kapow-";
 suffix="/archive/$branch.zip";
 
 # Array of Kapow! component names.
-declare -a arr=("skeleton" "sass" "grunt" "theme" "core")
+declare -a arr=("skeleton" "sass" "grunt" "theme" "core" "project-core")
 
 # Fetch and extract the archives from GitHub.
 echo "$(tput setaf 3)Downloading Kapow! repositories...$(tput setaf 9)"
@@ -37,9 +39,9 @@ for i in "${arr[@]}"
 	do
 		file="$i.zip"
 
-		curl -Lo "$file" "$prefix$i$suffix"
+		curl -s -Lo "$file" "$prefix$i$suffix"
 
-		unzip "$file"
+		unzip "$file" > /dev/null 2>&1
 done
 
 echo "$(tput setaf 3)Scaffolding the instance...$(tput setaf 9)"
@@ -96,6 +98,18 @@ if [ -d $coredir ]
 	mkdir build/wp-content/plugins/kapow-core
 	chmod 755 build/wp-content/plugins/kapow-core
 	cp -a $coredir/* build/wp-content/plugins/kapow-core
+fi
+
+# Move Project Core.
+projectcoredir="kapow-project-core-$branch/project-core";
+if [ -d $projectcoredir ]
+	then
+	# Create the project core plugin directory, give it
+	# the correct permissions and then
+	# copy the theme files over.
+	mkdir build/wp-content/plugins/project-core
+	chmod 755 build/wp-content/plugins/project-core
+	cp -a $projectcoredir/* build/wp-content/plugins/project-core
 fi
 
 # Remove the archives for good housekeeping.
@@ -168,29 +182,36 @@ if [ $slug ]
 
 fi
 
-# Core variables that can be overriden by kapow.config.
-skeletonphpversion="71"
-skeletonwpplugins=true
-skeletonwpsalts=true
-skeletonupdateoptions=true
-skeletonwptestdata=true
-skeletonprecommitwpcs=true
-sassnormalize=true
-sassframework="noframework"
-gruntlintphp=false
-gruntlintscss=false
-gruntlintjs=false
-gruntdocumentphp=false
-gruntdocumentscss=false
-gruntdocumentjs=false
-gruntlegacybrowsers=false
-
 # Import the Kapow! config file if it exists.
 echo "$(tput setaf 3)Checking for Kapow! configuration file...$(tput setaf 9)"
 configfile="kapow.config"
 if [ -f $configfile ]
 	then
+
+		echo "$(tput setaf 2)Config file found! Loading...$(tput setaf 9)"
 		source kapow.config
+	else
+
+	# Default Skeleton variables.
+	skeletonphpversion="71"
+	skeletonwpplugins=true
+	skeletonwpsalts=true
+	skeletonupdateoptions=true
+	skeletonwptestdata=true
+	skeletonprecommitwpcs=true
+
+	# Default Sass variables.
+	sassnormalize=true
+	sassframework="noframework"
+
+	# Default Grunt variables.
+	gruntlintphp=false
+	gruntlintscss=false
+	gruntlintjs=false
+	gruntdocumentphp=false
+	gruntdocumentscss=false
+	gruntdocumentjs=false
+	gruntlegacybrowsers=false
 fi
 
 # Implement Kapow! config settings.
@@ -258,9 +279,26 @@ $(tput setaf 2)  $slug:
 fi
 
 # Remove Kapow! Setup!
-echo "$(tput setaf 3)Removing Kapow! Setup files..."
+echo "$(tput setaf 3)Removing Kapow! Setup files...$(tput setaf 9)"
 rm kapow.sh
 rm kapow.config
 
 # Success!
 echo "$(tput setaf 3)Success! Your Kapow! instance has now been created.$(tput setaf 9)"
+
+# Provision now or not?
+printf "$(tput setaf 3)Would you like to provision this site now? (y|n) "
+read -e PROVISION
+echo
+
+if [ "$PROVISION" = "y" ]
+	then
+
+	echo "$(tput setaf 3)Provisioning $slug.dev...$($tput setaf 9)"
+	vagrant provision --provision-with=site-"$slug"
+
+	else
+
+	echo "$(tput setaf 3)No problem, just run this command when you're ready...$(tput setaf 9)"
+	echo "$(tput setaf 2)vagrant provision --provision-with=site-$slug$(tput setaf 9)"
+fi
