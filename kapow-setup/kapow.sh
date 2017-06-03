@@ -294,7 +294,7 @@ echo
 if [ "$PROVISION" = "y" ]
 	then
 
-	echo "$(tput setaf 3)Provisioning $slug.dev...$($tput setaf 9)"
+	echo "$(tput setaf 3)Provisioning $slug.dev...$(tput setaf 9)"
 	vagrant provision --provision-with=site-"$slug"
 
 	else
