@@ -27,7 +27,7 @@ if [ "$1" = "develop" ]
 fi
 
 # GitHub Kapow URL prefix & suffix.
-prefix="https://github.com/mkdo/kapow-";
+prefix="https://github.com/kapow-wp/kapow-";
 suffix="/archive/$branch.zip";
 
 # Array of Kapow! component names.
