@@ -1,3 +1,5 @@
+![Kapow! Logo Banner](https://raw.githubusercontent.com/kapow-wp/kapow-setup/master/kapow-full-logo-x2.png)
+
 # Kapow! Setup
 The setup script for the Kapow! boilerplate for bespoke WordPress site development. 
 
