@@ -40,7 +40,7 @@ echo
 gitdir=".git"
 configfile="kapow.config"
 
-if [ -f $configfile ]
+if [ -f "$configfile" ]
 	then
 
 		echo "$(tput setaf 2)Config file found! Loading...$(tput setaf 9)"
@@ -134,7 +134,7 @@ if [ "$setuprepository" ]
 
 					httpresponse=$(curl --silent -u "$githubuser" -w 'HTTPSTATUS:%{http_code}' -d "{\"name\":\"$slug\",\"private\":\"true\"}" https://api.github.com/orgs/"$githuborg"/repos)
 
-					httpstatus=$(echo $httpresponse | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
+					httpstatus=$(echo "$httpresponse" | tr -d '\n' | sed -e 's/.*HTTPSTATUS://')
 
 					# Proceed if successful.
 					if [ "$httpstatus" = "201" ]
