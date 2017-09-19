@@ -4,6 +4,10 @@
 
 echo "$(tput setaf 2)Initialising Kapow! Setup script...$(tput setaf 9)"
 
+hash git 2>&- || { echo >&2 "Git is required but missing. Exiting."; exit 1; }
+hash unzip 2>&- || { echo >&2 "Unzip is required but missing. Exiting."; exit 1; }
+hash curl 2>&- || { echo >&2 "cURL is required but missing. Exiting."; exit 1; }
+
 # Input variables
 if [ "$1" = "develop" ]
 	# Assume first argument is a branch
